@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guess The Number</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="Task2.js" defer></script>
+  <style>
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #d0eaff, #e4ffe8);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+input[type="number"] {
+  padding: 12px;
+  width: 220px;
+  border: 2px solid #2980b9;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-bottom: 25px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input[type="number"]:focus {
+  border-color: #27ae60;
+  box-shadow: 0 0 8px rgba(39, 174, 96, 0.5);
+}
+
+
+button {
+  padding: 12px 24px;
+  background-color: #27ae60;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #2ecc71;
+}
+
+
+#message, #attempts {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #34495e;
+}
+
+#message {
+  transition: all 0.3s ease-in-out;
+}
+
+  </style>
+</head>
+<body>
+
+  <h1>🎲 Guess the Number (1-10)</h1>
+
+  <input type="number" id="guessInput" placeholder="Enter your guess" min="1" max="10" />
+  <button onclick="checkGuess()">Test My Attempt </button>
+
+  <p id="message"></p>
+  <p id="attempts"></p>
+
+  
+</body>
+</html>
