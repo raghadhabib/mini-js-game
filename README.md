@@ -18,13 +18,6 @@ The user has 3 chances to guess a randomly generated number between 0 and 9.
 - CSS
 - JavaScript
 
----
-
-## 📷 Preview
-
-![screenshot](preview.png) <!-- تقدري تضيفي صورة لو حبيتي -->
-
----
 
 ## ✨ Features
 
