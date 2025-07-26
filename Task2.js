@@ -61,9 +61,9 @@ function submitGuess() {
     document.getElementById("guessInput").disabled = true;
     document.querySelector(".testBtn").disabled = true;
   } else if (guess > secretNumber) {
-    message.textContent = "Too high!"+secretNumber;
+    message.textContent = "Too high!";
   } else {
-    message.textContent = "Too low!"+secretNumber;
+    message.textContent = "Too low!";
   }
 
   attemptsLeft--;
@@ -93,6 +93,9 @@ function TryAgain(){
   document.getElementById("attempts").textContent= "";
   document.getElementById("guessInput").value = "";
    document.getElementById("timer").textContent = "";
+   document.getElementById("guessInput").disabled = false;
+    document.querySelector(".testBtn").disabled = false;
+  
 
   clearInterval(timerInterval);
   startAttemptTimer();
