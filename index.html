@@ -41,7 +41,7 @@ input[type="number"]:focus {
 }
 
 
-button {
+.testBtn {
   padding: 12px 24px;
   background-color: #27ae60;
   border: none;
@@ -52,8 +52,30 @@ button {
   transition: 0.3s;
 }
 
-button:hover {
-  background-color: #2ecc71;
+.testBtn:hover {
+  background-color: #ffffff;
+  color: #2ecc71;
+  border: 2px double #27ae60;
+  
+}
+
+.tryAgainBtn{
+  padding: 14px 63px;
+  background-color: #2791ae;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.tryAgainBtn:hover {
+  background-color: #ffffff;
+  color: #2791ae;
+  border: 2px double #2791ae;
+  
 }
 
 
@@ -63,6 +85,7 @@ button:hover {
   font-weight: bold;
   color: #34495e;
 }
+
 
 #message {
   transition: all 0.3s ease-in-out;
@@ -75,7 +98,11 @@ button:hover {
   <h1>🎲 Guess the Number (1-10)</h1>
 
   <input type="number" id="guessInput" placeholder="Enter your guess" min="1" max="10" />
-  <button onclick="checkGuess()">Test My Attempt </button>
+  <button onclick="submitGuess()" class = "testBtn">Test My Attempt </button>
+  <p id="timer" style="font-size: 18px; color: #c0392b; margin-top: 10px;"></p>
+
+
+  <button onclick="TryAgain()" class="tryAgainBtn">Reset </button>
 
   <p id="message"></p>
   <p id="attempts"></p>
