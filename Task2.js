@@ -56,13 +56,14 @@ function submitGuess() {
 
   if (guess === secretNumber) {
     message.textContent = `🎉 Congratulations! The number was ${secretNumber}`;
+    document.getElementById("successSound").play(); 
     won = true;
     document.getElementById("guessInput").disabled = true;
     document.querySelector(".testBtn").disabled = true;
   } else if (guess > secretNumber) {
-    message.textContent = "Too high!";
+    message.textContent = "Too high!"+secretNumber;
   } else {
-    message.textContent = "Too low!";
+    message.textContent = "Too low!"+secretNumber;
   }
 
   attemptsLeft--;
@@ -114,6 +115,7 @@ function startAttemptTimer() {
 
       document.getElementById("message").textContent = `⌛ Time's up! You missed this attempt.`;
       document.getElementById("attempts").textContent = `Attempts left: ${attemptsLeft}`;
+      document.getElementById("timesupSound").play();
 
       if (attemptsLeft === 0) {
         document.getElementById("message").textContent += ` ❌ You lost! The number was ${secretNumber}`;
